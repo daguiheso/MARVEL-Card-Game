@@ -1,6 +1,38 @@
 @import "./card/styles.styl"
+
+test(color=red)
+	border 1px solid color
+	box-sizing border-box
+	
 body 
 	font-family Arial
 	font-size 16px
+	margin 0
 
-
+.Layout
+	display flex
+	padding .5em
+	//margin .5em
+	flex-direction column
+	min-height 100vh
+	justify-content: space-between;
+	test(brown)
+	> section
+		margin .5em
+	&-main 
+		display flex
+		justify-content: space-between;
+	&-status
+		test(green)
+		width 200px
+	&-battle
+		test(orange)
+		flex 1
+		margin 0 .5em
+	&-phases
+		test(purple)
+		width 200px
+	&-antagonist
+		test(lightblue)
+	&-player
+		test(gray)

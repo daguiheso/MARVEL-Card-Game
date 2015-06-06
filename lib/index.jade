@@ -5,5 +5,13 @@ head
 	title Marvel Game Card
 	link(rel="stylesheet", href="./public/css/app.css")
 body
-	h1 Marvel Game Card
-	include ./card/template.jade
+	//- h1 Marvel Game Card
+	//- include ./card/template.jade
+
+	section(class="Layout")
+		section(class="Layout-antagonist") angonist
+		section(class="Layout-main")
+			div(class="Layout-status") status
+			div(class="Layout-battle") battle
+			div(class="Layout-phases") phases
+		section(class="Layout-player") player
