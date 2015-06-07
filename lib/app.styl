@@ -17,6 +17,8 @@ body
 	flex-direction column
 	min-height 100vh
 	justify-content: space-between;
+	background-image url('../images/city.jpg')
+	background-size cover
 	test(brown)
 	> section
 		margin .5em
@@ -30,6 +32,7 @@ body
 		test(orange)
 		flex 1
 		margin 0 .5em
+		background-image url('../images/pattern.jpg')
 	&-phases
 		test(purple)
 		width 200px
@@ -56,8 +59,24 @@ body
 		padding .5em
 		margin 0
 		
+
 .Phases
 	background white 
 	border 5px dashed red
 	position absolute
 	right 0
+	
+
+.Battle
+	padding .5em
+	&-antagonist
+		display flex
+		justify-content space-between
+		> div
+			margin 10px
+
+	&-player
+		display flex
+		justify-content space-between
+		> div
+			margin 10px

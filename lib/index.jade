@@ -15,7 +15,14 @@ body
 			div(class="Layout-status") 
 				each name in ["David", "Daniel"]
 					include ./status/template.jade
-			div(class="Layout-battle") battle
+			div(class="Layout-battle")
+				div(class="Battle")
+					div(class="Battle-antagonist")
+						each card in [1,2,3,4,5]
+							include ./card/template.jade
+					div(class="Battle-player")
+						each card in [1,2,3,4,5]
+							include ./card/template.jade
 			div(class="Layout-phases") 
 				- text = "ohh por Dios, ese ataque fue muy fuerte"
 				include ./phases/template.jade
