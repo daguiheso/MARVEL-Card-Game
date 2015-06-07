@@ -5,27 +5,6 @@ head
 	title Marvel Game Card
 	link(rel="stylesheet", href="./public/css/app.css")
 body
-	//- h1 Marvel Game Card
-
-	section(class="Layout")
-		section(class="Layout-antagonist") 
-			each card in [1,2,3,4,5]
-				include ./card/template.jade
-		section(class="Layout-main")
-			div(class="Layout-status") 
-				each name in ["David", "Daniel"]
-					include ./status/template.jade
-			div(class="Layout-battle")
-				div(class="Battle")
-					div(class="Battle-antagonist")
-						each card in [1,2,3,4,5]
-							include ./card/template.jade
-					div(class="Battle-player")
-						each card in [1,2,3,4,5]
-							include ./card/template.jade
-			div(class="Layout-phases") 
-				- text = "ohh por Dios, ese ataque fue muy fuerte"
-				include ./phases/template.jade
-		section(class="Layout-player")
-			each card in [1,2,3,4,5]
-				include ./card/template.jade
+	include ./layout/template.jade
+	
+	
