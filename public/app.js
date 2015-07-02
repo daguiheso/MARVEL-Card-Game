@@ -39,6 +39,10 @@ api.findSeries('avengers').then(function (serie) {
 
 	return Promise.all(promises);
 }).then(function (characters) {
+	return characters.filter(function (character) {
+		return !!character.thumbnail;
+	});
+}).then(function (characters) {
 	$('.Card').each(function (i, item) {
 		var character = characters[i];
 		var $this = $(item);
