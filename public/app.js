@@ -39,6 +39,17 @@ api.findSeries('avengers').then(function (serie) {
 
 	return Promise.all(promises);
 }).then(function (characters) {
+	$('.Card').each(function (i, item) {
+		var character = characters[i];
+		var $this = $(item);
+		var $name = $this.find('.Card-name');
+		var $image = $this.find('.Card-image');
+		var $description = $this.find('.Card-description');
+
+		$name.text(character.name);
+		$image.attr('src', character.thumbnail.path + '.' + character.thumbnail.extension);
+		$description.text(character.description);
+	});
 	console.log(characters);
 })['catch'](function (err) {
 	console.error(err);
